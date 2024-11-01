@@ -60,7 +60,11 @@ jobs:
       mysql:
         image: mysql
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          #MYSQL_ALLOW_EMPTY_PASSWORD: 0
+          MYSQL_USER: LOCAL
+          MYSQL_PASSWORD: LOCAL
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: appexample_test
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
