@@ -60,7 +60,7 @@ jobs:
       mysql:
         image: mysql
         env:
-          #MYSQL_ALLOW_EMPTY_PASSWORD: 0
+          #MYSQL_ALLOW_EMPTY_PASSWORD: true
           MYSQL_USER: LOCAL
           MYSQL_PASSWORD: LOCAL
           MYSQL_ROOT_PASSWORD: root
